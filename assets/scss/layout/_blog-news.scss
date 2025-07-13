@@ -1,0 +1,95 @@
+.blog_news_area{
+    .blog_card{
+        border: 1px solid $border;
+        border-radius: 10px;
+        width:100%;
+        padding: 40px 60px;
+        @include transition(0.4s);
+        &:hover{
+            border: 1px solid $primary;
+            .hover_image{
+                opacity: 1;
+                visibility: visible
+            }
+            .arrow_btn{
+               span{
+                background-color: $primary;
+                color: $white;
+               }
+            }
+        }
+    }
+    .meta_info{
+        @include flex(row, flex-start, center);
+        gap: 30px;
+        span{
+            font-weight: 400;
+            font-size: 21px;
+            color: $text;
+            i{
+                color: $primary;
+                margin-right: 10px;
+            }
+        }
+    }
+    h3{
+        a{
+            font-weight: 600;
+            font-size: 35px;
+            letter-spacing: -0.03em;
+            color: $black;
+            @include transition(0.4s);
+            &:hover{
+                color: $primary;
+            }
+        }
+    }
+    .hover_image{
+        @include border-radius(20px);
+        width: 231px;
+        height: 274px;
+        position: absolute;
+        top: -100px;
+        left: 55px;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(0.4s);
+        img{
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+    }
+    .arrow_btn{
+        span{
+            border-radius: 999px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+            display: block;
+            text-align: center;
+            font-size: 44px;
+            color: $black;
+            background-color: $gray1;
+            @include transition(0.4s);
+            i{
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -ms-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                @include transition(0.4s);
+}
+            &:hover{
+                i{
+                    transform: rotate(0deg);
+                    -webkit-transform: rotate(0deg);
+                    -moz-transform: rotate(0deg);
+                    -ms-transform: rotate(0deg);
+                    -o-transform: rotate(0deg);
+}
+            }
+        }
+    }
+}

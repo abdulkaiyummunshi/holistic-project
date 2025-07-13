@@ -1,0 +1,30 @@
+
+// More Info area start
+
+.more-info{
+  background-image: url("../imgs/more-info/more-info.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 645px;
+  display: flex;
+  align-items: center;
+  margin-top: 150px;
+
+  .section-title{
+    color: $white;
+
+  }
+  p{
+    color: $white;
+    margin-top: 25px;
+    margin-bottom: 30px;
+  }
+
+  .info-content{
+    width: 580px;
+  }
+  .info-img {
+    text-align: right;
+  }
+}

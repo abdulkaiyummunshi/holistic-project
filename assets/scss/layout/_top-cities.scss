@@ -1,0 +1,58 @@
+
+// top cities area
+
+.top-cities{
+    margin-top: 150px;
+}
+
+.city{
+
+    transition: all 0.3s;
+
+    .city-img{
+        max-height: 260px;
+        overflow: hidden;
+        transition: all 0.3s;
+        box-shadow: 0px 5px 60px 0px #0000000D;
+
+
+        img{
+            width: 100%;
+        }
+    }
+
+
+
+    &:hover{
+       .city-img{
+        max-height: 1000px;
+       }
+    }
+}
+
+.city-link{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+
+    .city-name{
+        h3{
+            font-weight: 600;
+            font-size: 26px;
+            line-height: 34px;
+            color: $black;
+        }
+
+    }
+    a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #F9F9F9;
+        color: $primary;
+    }
+}

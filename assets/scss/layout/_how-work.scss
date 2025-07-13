@@ -1,0 +1,113 @@
+
+// How work area start
+
+.how-work{
+    margin-top: 150px;
+    padding-bottom: 150px;
+    position: relative;
+}
+
+.shape-women{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.work-img{
+    padding: 50px;
+    position: relative;
+
+    img{
+        border-radius: 20px;
+    }
+
+    .shape-dot{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        animation: moving-dots 20s linear infinite;
+
+    }
+    .line{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+}
+
+@keyframes moving-dots {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -40px);
+  }
+  50% {
+    transform: translate(-40px, -40px);
+  }
+  75% {
+    transform: translate(-40px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+.how-work-container{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+}
+
+.tab-btn-wrapper{
+    border: 1px solid $border;
+    border-radius: 999px;
+    padding: 10px;
+    width: fit-content;
+    margin-top: 25px;
+
+    button{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        color: $black;
+        border-radius: 50px;
+        padding: 10px 30px;
+        border: none;
+        background-color: transparent;
+
+        &.active{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+.work-content{
+    ul{
+        margin-top: 30px;
+
+        li{
+
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 36px;
+            color: $black;
+
+            span{
+                color: $primary;
+                margin-right: 20px;
+                font-size: 18px;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: #F9F9F9;
+            }
+        }
+    }
+}
