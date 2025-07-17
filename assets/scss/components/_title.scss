@@ -7,6 +7,10 @@
 
 .section-header{
   margin-bottom: 60px;
+
+  @include md{
+    margin-bottom: 40px;
+  }
 }
 
 .section-title{

@@ -36,7 +36,7 @@
   <!-- Mobile Offcanvas -->
   <div class="offcanvas__area offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
     <div class="offcanvas-header">
-      <img src="assets/imgs/logo/logo.png" alt="Logo" class="logo">
+      <img src="assets/imgs/logo/logo2.png" alt="Logo" class="logo">
       <button class="btn--close" data-bs-dismiss="offcanvas">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -64,26 +64,25 @@
           <div class="header-menu-wrapper">         
             <nav class="main-menu">
               <ul>
-                <li class="has-dropdown"><a href="#">Home</a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <li class="has-dropdown"><a href="#">Listing</a>
                   <ul class="main-dropdown">
-                    <li><a href="index.html">Home One</a></li>
-                    <li><a href="index-2.html">Home Two</a></li>
+                    <li><a href="listing.html">Listing</a></li>
+                    <li><a href="listing_details1.html">Listing 01</a></li>
+                    <li><a href="listing_details2.html">Listing 02</a></li>
+                    <li><a href="listing_details3.html">Listing 03</a></li>
+                    <li><a href="listing_details4.html">Listing 04</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">About</a></li>
   
                 <li class="has-dropdown"><a href="#">pages</a>
                   <ul class="main-dropdown">
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="service-details.html">Service Details</a></li>
-                    <li><a href="project.html">Project</a></li>
-                    <li><a href="project-details.html">Project Details</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="team-details.html">Team Details</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonial.html">Testimonial</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="404.html">404 page</a></li>
+                    <li><a href="service_details.html">Service Details</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="user_dashboard.html">User Dashboard (Guest)</a></li>
+                    <li><a href="owner_dashboard.html">User Dashboard (Owner)</a></li>
                   </ul>
                 </li>
   
@@ -107,11 +106,12 @@
                 <i class="fa fa-plus"></i>
                 <span>Add Listing</span>
               </a>
+
+              <button class="menu--open" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </div>      
   
-            <button class="menu--open" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-              <i class="fa-solid fa-bars"></i>
-            </button>
           </div>          
         </div>
       </div>      
@@ -121,35 +121,35 @@
   <div id="smooth-wrapper">
       <div id="smooth-content">
 
-
-        <!-- Inner Hero Start -->
+                 <!-- Inner Hero Start -->
         <section class="inner_hero style_1">
             <div class="overly">
                 <div class="container align-items-center">
-                    <div class="row">
-                        <div class="col-lg-6">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-6">
                             <div class="sub_heading">
                                 <h2>Listing Details</h2>
                         </div>
-                    </div>
-                    <div class="col-lg-6 d-md-flex justify-content-end align-items-center">
+                        </div>
+                        <div class="col-lg-6 col-md-6 d-md-flex justify-content-end align-items-center">
                         <div class="heading_menu">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
                                 <li><a href="listing_details1.html"><span><i class="fa-solid fa-angle-right"></i></span>Listing Details</a></li>
                             </ul>
                         </div>
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
             
         </section> 
        <!-- Inner Hero End -->  
+
        <!-- Listing start -->
-        <section class="listing_details_area mt-150 pb-150">
+        <section class="listing_details_area mt-150">
             <div class="container">
-                <div class="row">
+                <div class="row style_1">
                     <div class="col-lg-4">
                         <div class="sidebar">
                             <div class="widget widget_login">
@@ -230,7 +230,7 @@
                           <div class="title">
                             <h3>Amenities</h3>
                           </div>
-                          <div class="row mt-30">
+                          <div class="row style_001 mt-30">
                             <div class="col-lg-3">
                               <ul>
                                 <li><span><i class="fa-solid fa-circle-check"></i></span>Serene Spirit Spa</li>
@@ -456,7 +456,12 @@
                             </div>
                             <div class="image_upload mt-30">
                               <h5>Upload Image</h5>
-                              <input type="file" id="upload">
+                              <div class="form-row">
+                                  <div class="upload-area">
+                                      <input type="file" id="logoUpload" accept="image/*" style="display: none;">
+                                      <button type="button" class="upload-button" id="customUploadButton">Upload File</button>
+                                  </div>
+                              </div>
                             </div>
                               <div class="message_sent_btn mt-30">
                                   <button class="primary-btn" type="submit">Submit Review<span><i class="fa-solid fa-long-arrow-right"></i></span></button>
@@ -473,7 +478,7 @@
        <!-- Listing end -->
 
         <!-- Footer Start -->
-        <footer class="footer mt-150">
+        <footer class="footer mt-295">
           <div class="subscribe_area">
             <div class="container">
               <div class="stay_connected">
@@ -486,7 +491,7 @@
                       <div class="title">
                         <h3>Stay Connected</h3>
                       </div>
-                      <p>Get monthy curated wellness tips and practitioner spotlights from linda.</p>
+                      <p>Get monthy curated wellness tips and <br class="d-lg-none"> practitioner spotlights from linda.</p>
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -533,10 +538,10 @@
                                   <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://www.linkedin.com/"><i class="fa-brands fa-instagram"></i></a>
+                                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://www.instagram.com/"><i class="fa-brands fa-pinterest-p"></i></a>
+                                  <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -547,21 +552,21 @@
                         <div class="quicklink">
                           <h3>Catagories</h3>
                           <ul>
-                            <li><a href="about.html">Holistic Services </a></li>
-                            <li><a href="about.html">Natural Product </a></li>
-                            <li><a href="terms_condition.html">Healty Eating</a></li>
-                            <li><a href="cookie_policy.html">Businesses</a></li>
+                            <li><a href="listing_details3.html">Holistic Services </a></li>
+                            <li><a href="listing_details1.html">Natural Product </a></li>
+                            <li><a href="listing_details4.html">Healty Eating</a></li>
+                            <li><a href="listing_details2.html">Businesses</a></li>
                           </ul>
                         </div>
                       </div>
-                      <div class="col-lg-2 col-md-7 col-12 d-flex justify-content-center">
+                      <div class="col-lg-2 col-md-2 col-12 d-lg-flex justify-content-center">
                         <div class="quicklink">
                           <h3>Help</h3>
                           <ul>
-                            <li><a href="categoriy.html">Sign In </a></li>
-                            <li><a href="categoriy.html">Add Listing </a></li>
-                            <li><a href="categoriy.html">Contact Us</a></li>
-                            <li><a href="categoriy.html"> Blog</a></li>
+                            <li><a href="contact.html">Sign In </a></li>
+                            <li><a href="listing.html">Add Listing </a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="blog.html"> Blog</a></li>
                           </ul>
                         </div>
                       </div>
@@ -587,15 +592,6 @@
                                 <a href="https://www.google.com/maps?q=2464+Royal+Ln,+Mesa,+New+Jersey+45463" target="_blank">6391 Elgin St. Celina, Delaware 10299</a>
                               </div>
                             </div>
-                            <!-- <div class="contact_card_wrapper mt-30">
-                              <div class="contact_icon">
-                                <span><i class="fa-solid fa-envelope"></i></span>
-                              </div>
-                              <div class="contact_details">
-                                <h5>Email</h5>
-                                <a href="mailto:info@example.com">abcd@gmail.com</a>
-                              </div>
-                            </div> -->
                           </div>
                         </div>
                       </div>
@@ -610,8 +606,8 @@
                       <div class="footer_last_menu">
                         <nav>
                           <ul>
-                            <li><a href="terms_condition.html">Terms & Condition</a></li>
-                            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Terms & Condition</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                           </ul>
                         </nav>

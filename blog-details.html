@@ -34,9 +34,10 @@
   <!-- <button id="scroll_top" class="scroll--top"><i class="fa-solid fa-arrow-up"></i></button> -->
 
   <!-- Mobile Offcanvas -->
+  <!-- Mobile Offcanvas -->
   <div class="offcanvas__area offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight">
     <div class="offcanvas-header">
-      <img src="assets/imgs/logo/logo.png" alt="Logo" class="logo">
+      <img src="assets/imgs/logo/logo2.png" alt="Logo" class="logo">
       <button class="btn--close" data-bs-dismiss="offcanvas">
         <i class="fa-solid fa-xmark"></i>
       </button>
@@ -64,26 +65,25 @@
           <div class="header-menu-wrapper">         
             <nav class="main-menu">
               <ul>
-                <li class="has-dropdown"><a href="#">Home</a>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+
+                <li class="has-dropdown"><a href="#">Listing</a>
                   <ul class="main-dropdown">
-                    <li><a href="index.html">Home One</a></li>
-                    <li><a href="index-2.html">Home Two</a></li>
+                    <li><a href="listing.html">Listing</a></li>
+                    <li><a href="listing_details1.html">Listing 01</a></li>
+                    <li><a href="listing_details2.html">Listing 02</a></li>
+                    <li><a href="listing_details3.html">Listing 03</a></li>
+                    <li><a href="listing_details4.html">Listing 04</a></li>
                   </ul>
                 </li>
-                <li><a href="about.html">About</a></li>
   
                 <li class="has-dropdown"><a href="#">pages</a>
                   <ul class="main-dropdown">
-                    <li><a href="service.html">Service</a></li>
-                    <li><a href="service-details.html">Service Details</a></li>
-                    <li><a href="project.html">Project</a></li>
-                    <li><a href="project-details.html">Project Details</a></li>
-                    <li><a href="team.html">Team</a></li>
-                    <li><a href="team-details.html">Team Details</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonial.html">Testimonial</a></li>
-                    <li><a href="faq.html">FAQs</a></li>
-                    <li><a href="404.html">404 page</a></li>
+                    <li><a href="service_details.html">Service Details</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="user_dashboard.html">User Dashboard (Guest)</a></li>
+                    <li><a href="owner_dashboard.html">User Dashboard (Owner)</a></li>
                   </ul>
                 </li>
   
@@ -107,11 +107,12 @@
                 <i class="fa fa-plus"></i>
                 <span>Add Listing</span>
               </a>
+
+              <button class="menu--open" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
+                <i class="fa-solid fa-bars"></i>
+              </button>
             </div>      
   
-            <button class="menu--open" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight">
-              <i class="fa-solid fa-bars"></i>
-            </button>
           </div>          
         </div>
       </div>      
@@ -129,14 +130,14 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="sub_heading">
-                                <h2>Blog</h2>
+                                <h2>Blog Details</h2>
                         </div>
                     </div>
                     <div class="col-lg-6 d-md-flex justify-content-end align-items-center">
                         <div class="heading_menu">
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="listing_details1.html"><span><i class="fa-solid fa-angle-right"></i></span>Blog</a></li>
+                                <li><a href="blog-details.html"><span><i class="fa-solid fa-angle-right"></i></span>Blog Details</a></li>
                             </ul>
                         </div>
                     </div>
@@ -149,219 +150,246 @@
        <div class="blog-area">
           <div class="container">
             <div class="row">
-              <div class="col-lg-8">
-    
-               <div class="blog-details-wrapper">
-                <article class="single-post-item format-image">
-                  <div class="post-thumbnail ">                    
-                    <img src="./assets/imgs/blog_details/blog1.png" alt="blog image" class="wow custom-animate" />
+             <div class="col-lg-8">
+          <div class="blog-details-wrapper">
+            <article class="single-post-item format-image">
+              <div class="post-thumbnail">
+                <img src="./assets/imgs/blog_details/blog1.png" alt="thumbnail">
+               
+              </div>
+              <div class="post-content-wrapper">    
+                  <div class="post-heading">
+                    <h3 class="post-title">Wholeness in every treatment<h3> 
                   </div>
-    
-                  <div class="post-content-wrapper">     
-                    <div class="post-heading">
-                      <h3 class="post-title">Wholeness in every treatment<h3> 
-                    </div>         
-                    <div class="post-meta">
-                      <span class="author-img">
-                        <a href="blog.html">
-                          <span class="meta-text">By Admin</span>
-                        </a>
-                      </span>
-                      <span class="blog-category">
-                        <a href="blog.html">
-                          <span class="meta-text style_1">Category</span>
-                        </a>
-                      </span>
-                      <span class="post-date">
-                        <a href="blog.html">
-                          <span class="meta-text style_1">October 19, 2024</span>
-                        </a>
-                      </span>
-                    </div>
-                    
-                    <div class="post-content">                  
-                        
-                      <p >
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses innovations in
-                        software, hardware, communication, and automation
-                      </p>
-                      <p>
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses innovations in
-                        software, hardware, communication, and automation
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses innovations in
-                        software, hardware, communication, and
-                        automationTechnology is constantly evolving
-                      </p>
-                    
-                      <p >
-                        <strong>Where Technology Meets Tomorrow</strong>
-                      </p>
-                      <p>
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses innovations in
-                        software, hardware, communication, and automation
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses
-                      </p>
-                      
-                      <ul >
-                        <li>                      
-                          Powering Progress Through Innovation Seamless Solutions
-                        </li>
-                        <li>
-                          Digital World Where Technology Meets Tomorrow Possibilities
-                        </li>
-                        <li>  
-                          Redefining Excellence in Tech Shaping the Digital Landscape                    
-                        </li>
-                        <li>
-                          IT Technology constantly strive to improve efficiency
-                        </li>
-                      </ul>
-                      
-                      <p>
-                        <strong>
-                          Digitally Driven Globally Connected
-                        </strong>
-                      </p>                   
-                      <p >
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses innovations in
-                        software, hardware, communication, and automation
-                        Technology is constantly evolving, shaping our future
-                        and transforming how we live encompasses
-                      </p>
-                      <p class="blog-imgs">
-                        <img src="./images/blog/block-page/blog-details-solution-img-1.png" alt="blog">
-                        <img src="./images/blog/block-page/blog-details-solution-img-2.png" alt="blog">
-                      </p>
-                     
-                    </div>
-                    <div class="default-single-post-meta">
-                      <div class="blog-post-cat">
-                        <span>Tags:</span>
-                        <div class="post-cat-list">
-                          <a href="blog.html">Code Crafters</a>
-                          
-                          <a href="blog.html">Precision Pixels</a>
-                          
-                          <a href="blog.html">Pulse</a>
-                          
-                        </div>
-                      </div>
-                     
-                      <div class="blog-post-tag">
-                        <span>Social:</span>
-                        <div class="post-tag-list">
-                          <a href="#" class="ms-0"><i class="fa-brands fa-pinterest-p"></i></a>
-                          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                          <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                        </div>
-                      </div>
-                      <!-- end shear media  -->
-                    </div>
-                  </div>              
-                </article>
-    
-                <div class="blog-post-nav">
-                    <div class="post-navigation">
-                      <div class="post-img">
-                        <img src="./images/blog/block-page/blog-details-comment-pepole.png" alt="client">							
-                      </div>            
-                      <div class="text">
-                        <span><i class="fa fa-arrow-left"></i> Prev Post</span>
-                        <h4><a href="blog-details.html" rel="prev">Our new design for 2025</a> </h4>
-                      </div>
-                    </div>
-    
-                    <div class="divider"></div>
-                    <div class="post-navigation">
-                      <div class="post-img">
-                        <img src="./images/blog/block-page/blog-details-img-1.png" alt="client">									
-                      </div>          
-                      <div class="text">
-                        <span>Next Post <i class="fa fa-arrow-right"></i></span>
-                        <h4><a href="blog-details.html" rel="next">Will You Be Joining WordCamp This Year</a> </h4>
-                      </div>
-                    </div>
-                </div>
-                <div class="author-info">
-                  <div class="author-thumb text-center">
-                    <a href="#">
-                      <img src="./images/blog/block-page/blog-details-author.png" alt="client">
+                  <div class="post-meta mt-20">
+                  <span class="post-date">
+                    <a href="blog.html">
+                      <!-- <i class="fa-solid fa-calendar-days"></i> -->
+                      <span class="meta-text">By admin</span>
                     </a>
-                  </div>
-                  <div class="author-text text-center">
-                    <h4 class="">Chis Hawell</h4>
-                    <p class="section-meta pt-10">Designer</p>
-                    <p class="section-desc pt-20">
-                      Technology is constantly evolving, shaping our future
-                      and transforming how we live and work. encompasses
-                      innovations in software, hardware, communication
+                  </span>
+                  <span class="post-comment style_1">
+                    <a href="blog.html">
+                      <!-- <i class="fa-solid fa-comment"></i> -->
+                      <span class="meta-text">Category</span>
+                    </a>
+                  </span>
+                  <span class="author-img style_1">
+                    <a href="blog.html">
+                      <!-- <i class="fa-solid fa-user"></i> -->
+                      <span class="meta-text">Comments (05)</span>
+                    </a>
+                  </span>
+                </div>
+
+                  <div class="post-content ">
+                    <p>
+                     Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing on individual 
+                     symptoms. It involves personalized and comprehensive approaches to promote overall well-being and healing
+                    </p>
+                    <p>
+                     Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing on individual
+                      symptoms. It involves personalized and comprehensive approaches to promote overall well-being and healing
                     </p>
                   </div>
-                </div>
-                <div class="post-comments-form">
-                  <div id="respond" class="comment-respond">
-                    <div class="post-comments-title">
-                      <h2>Leave a Reply 
-                        <small>
-                          <a href="/crebiz/are-you-ready-for-web-summit-2025/#respond" style="display:none;">Cancel reply                  
-                          </a>
-                        </small>
-                      </h2>
+                
+                  <div class="author-info mt-57">
+                     <div class="author-text">
+                      <p>Holistic care aims to treat the whole person - body, mind, and spirit - rather than just 
+                        focusing on individual symptoms. It involves personalized and comprehensive approaches</p>
+                      </div>
+                      <div class="author-meta">
+                      <h3>Mark wood</h3>
+                      <span><i class="fa-solid fa-quote-right"></i></span>
                     </div>
-                    <form class="comment-form" >
-                      <div class="row">
-                        <div class="col-lg-6">
-                          <div class="contacts-name">
-                            <label>Your name *</label>
-                              <input type="text" name="author" placeholder="Your Name">
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="contacts-email ">
-                            <label>Your email *</label>
-                              <input type="email" name="email" placeholder="Your Email">
-                          </div>
-                        </div>   
-    
-                        <div class="contacts-message">
-                          <label>Comments *</label>
-                          <textarea id="comment" name="comment" rows="5" placeholder="Post Your Message"></textarea>
-                        </div>
-    
-                        <p class="comment-form-cookies-consent">
-                          <input type="checkbox">
-                          <label for="aggree">Save my name, email, and website in this browser for the next time I comment.</label>
-                        </p>
-    
-                        <button class="theme-btn">
-                          Post Comment
-                          <i class="fa fa-angle-right"></i>
-                        </button>
-                        <!-- <div class="mt-40">
-                          <button class="theme--btn">
-                            <button class="theme-btn style-two">
-                              Post Comment
-                            </button>
-                            <button class="theme-btn style-two">
-                              <i class="icon-right-arrow"></i>  
-                            </button>
-                          </button>
-                        </div>                    -->
-                         
+                   
+                  </div>
+
+                  <div class="post-content mt-40">
+                    <p>
+                      Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing on 
+                      individual symptoms. It involves personalized and comprehensive approaches to promote overall well-being
+                       and healing
+                    </p>
+                    
+                    <p>
+                      <strong>
+                        Uncover the World Through Blogging
+                      </strong>
+                    </p>
+                    <p>
+                      Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing on 
+                      individual symptoms. It involves personalized and comprehensive approaches to promote overall well-being 
+                      and healing
+                    </p>
+                  </div>
+                  <div class="post-content mt-30">
+                    <p>
+                      <span class="imgs">
+                        <img src="./assets/imgs/blog_details/blog2.png" alt="blog">
+                        <img src="./assets/imgs/blog_details/blog3.png" alt="blog">
+                      </span>
+                    </p>
+                  </div>
+
+                  <div class="post-content mt-30">
+                    <p>
+                      Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing on 
+                      individual symptoms. It involves personalized and comprehensive approaches to promote overall well-being
+                       and healing.Holistic care aims to treat the whole person - body, mind, and spirit - rather than just 
+                       focusing on individual symptoms. It involves personalized and comprehensive approaches to promote overall
+                        well-being and healing
+                    </p>
+                     <p>
+                      Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing on 
+                      individual symptoms. It involves personalized and comprehensive approaches to promote overall well-being 
+                      and healing
+                    </p>
+                  </div>
+
+                  <div class="post-content mt-20">
+                    <ul>
+                      <li><span><i class="fa-solid fa-circle-check"></i></span>Unleash Your Thoughts, Share Your Story</li>
+                      <li><span><i class="fa-solid fa-circle-check"></i></span>Unleash Your Thoughts, Share Your Story</li>
+                      <li><span><i class="fa-solid fa-circle-check"></i></span>Unleash Your Thoughts, Share Your Story</li>
+                      <li><span><i class="fa-solid fa-circle-check"></i></span>Unleash Your Thoughts, Share Your Story</li>
+                      <li><span><i class="fa-solid fa-circle-check"></i></span>Unleash Your Thoughts, Share Your Story</li>
+                      <li><span><i class="fa-solid fa-circle-check"></i></span>Unleash Your Thoughts, Share Your Story</li>
+                    </ul>
+                    
+                  </div>
+
+                  <div class="default-single-post-meta style-2">
+                    <div class="blog-post-cat">
+                      <span>Tags:</span>
+                      <div class="post-cat-list">
+                        <a href="categoriy.html">All Project</a>
+                        
+                        <a href="categoriy.html">BlogMentor</a>
+                        
+                        <a href="categoriy.html">ContentCraft</a>
                         
                       </div>
-                    </form>	
+                    </div>
+                  </div>
+
+              </div>
+              <!-- /post-content-wrapper -->
+
+            </article>
+
+            <div class="blog-post-nav">
+                <div class="post-navigation">
+                  <div class="post-arrow">
+                    <a href="#"><i class="fa fa-arrow-left"></i></a>
+                  </div>
+                  <div class="text">
+                    <span>Prev Post</span>
+                    <h4><a href="blog-details.html" rel="prev">Our new design for 2025</a> </h4>
                   </div>
                 </div>
-               </div>
-              </div>        
+
+                <div class="divider"></div>
+                <div class="post-navigation">
+                  <div class="post-arrow">
+                    <a href="#"><i class="fa fa-arrow-right"></i></a>
+                  </div>      
+                  <div class="text">
+                    <span>Next Post </span>
+                    <h4><a href="blog-details.html" rel="next">Will You Be Joining WordCamp This Year</a> </h4>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="post-comments mt-74">
+                <div class="blog-comment-title">
+                  <h2>2 Comments</h2>
+                </div>
+                <div class="latest-comments mt-40">
+                  <ul>
+                    <li>
+                      <div class="comments-box">
+                        <div class="commets-avatar">
+                          <img src="./assets/imgs/blog_details/avator.png" alt="">
+                        </div>
+                        <div class="comments-text">
+                          <div class="avatar-name">
+                            <div class="name">
+                              <h5>Stanio lainto</h5>
+                              <p>June 16, 2025</p>
+                            </div>
+                            <a href="#"> Reply</a>
+                          </div>
+                          <p>
+                            Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing 
+                            on individual symptoms. It involves personalized and comprehensive approaches 
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="comments-box">
+                        <div class="commets-avatar">
+                          <img src="./assets/imgs/blog_details/avator.png" alt="">
+                        </div>
+                        <div class="comments-text">
+                          <div class="avatar-name">
+                            <div class="name">
+                              <h5>Stanio lainto</h5>
+                              <p>June 16, 2025</p>
+                            </div>
+                            <a href="#"> Reply</a>
+                          </div>
+                          <p>
+                            Holistic care aims to treat the whole person - body, mind, and spirit - rather than just focusing 
+                            on individual symptoms. It involves personalized and comprehensive approaches 
+                          </p>
+                        </div>
+                      </div>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+  
+            <div class="post-comments-form mt-86">
+              <div class="comment-respond">
+                <div class="post-comments-title">
+                  <h2>Leave A Comment</h2>
+                </div>
+                <form action="#" method="post" class="comment-form mt-13">
+                  <div class="row">
+                  <div class="col-12">
+                    <div class="contacts-name">
+                    <input type="text" placeholder="Your Name" required>
+                  </div>
+                  </div>
+                  <div class="col-md-6 mt-30">
+                    <div class="contacts-name">
+                    <input type="text" placeholder="Email" required>
+                  </div>
+                  </div>
+                  <div class="col-md-6 mt-30">
+                    <div class="contacts-name">
+                    <input type="text" placeholder="Phone" required>
+                  </div>
+                  </div>
+                  <div class="col-12 mt-30">
+                    <div class="contacts-message">
+                  <textarea name="comment_box" id="comment_box" placeholder="Messege" required></textarea>
+                </div>
+                  </div>
+                </div>
+                  <div class="message_sent_btn mt-30">
+                    <div class="submit_btn">
+                      <button type="submit" class="primary-btn">Send Now<span><i class="fa-solid fa-arrow-right"></i></span></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>     
               <!-- end col-lg-8 -->
               <div class="col-lg-4">
               <aside>
@@ -476,7 +504,7 @@
         </div>
 
         <!-- Footer Start -->
-        <footer class="footer mt-150">
+        <footer class="footer mt-295">
           <div class="subscribe_area">
             <div class="container">
               <div class="stay_connected">
@@ -489,7 +517,7 @@
                       <div class="title">
                         <h3>Stay Connected</h3>
                       </div>
-                      <p>Get monthy curated wellness tips and practitioner spotlights from linda.</p>
+                      <p>Get monthy curated wellness tips and <br class="d-lg-none"> practitioner spotlights from linda.</p>
                     </div>
                   </div>
                   <div class="col-lg-6">
@@ -536,10 +564,10 @@
                                   <a href="https://x.com/"><i class="fa-brands fa-x-twitter"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://www.linkedin.com/"><i class="fa-brands fa-instagram"></i></a>
+                                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
                                 </li>
                                 <li>
-                                  <a href="https://www.instagram.com/"><i class="fa-brands fa-pinterest-p"></i></a>
+                                  <a href="https://www.pinterest.com/"><i class="fa-brands fa-pinterest-p"></i></a>
                                 </li>
                               </ul>
                             </div>
@@ -550,21 +578,21 @@
                         <div class="quicklink">
                           <h3>Catagories</h3>
                           <ul>
-                            <li><a href="about.html">Holistic Services </a></li>
-                            <li><a href="about.html">Natural Product </a></li>
-                            <li><a href="terms_condition.html">Healty Eating</a></li>
-                            <li><a href="cookie_policy.html">Businesses</a></li>
+                            <li><a href="listing_details3.html">Holistic Services </a></li>
+                            <li><a href="listing_details1.html">Natural Product </a></li>
+                            <li><a href="listing_details4.html">Healty Eating</a></li>
+                            <li><a href="listing_details2.html">Businesses</a></li>
                           </ul>
                         </div>
                       </div>
-                      <div class="col-lg-2 col-md-7 col-12 d-flex justify-content-center">
+                      <div class="col-lg-2 col-md-2 col-12 d-lg-flex justify-content-center">
                         <div class="quicklink">
                           <h3>Help</h3>
                           <ul>
-                            <li><a href="categoriy.html">Sign In </a></li>
-                            <li><a href="categoriy.html">Add Listing </a></li>
-                            <li><a href="categoriy.html">Contact Us</a></li>
-                            <li><a href="categoriy.html"> Blog</a></li>
+                            <li><a href="contact.html">Sign In </a></li>
+                            <li><a href="listing.html">Add Listing </a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                            <li><a href="blog.html"> Blog</a></li>
                           </ul>
                         </div>
                       </div>
@@ -590,15 +618,6 @@
                                 <a href="https://www.google.com/maps?q=2464+Royal+Ln,+Mesa,+New+Jersey+45463" target="_blank">6391 Elgin St. Celina, Delaware 10299</a>
                               </div>
                             </div>
-                            <!-- <div class="contact_card_wrapper mt-30">
-                              <div class="contact_icon">
-                                <span><i class="fa-solid fa-envelope"></i></span>
-                              </div>
-                              <div class="contact_details">
-                                <h5>Email</h5>
-                                <a href="mailto:info@example.com">abcd@gmail.com</a>
-                              </div>
-                            </div> -->
                           </div>
                         </div>
                       </div>
@@ -613,8 +632,8 @@
                       <div class="footer_last_menu">
                         <nav>
                           <ul>
-                            <li><a href="terms_condition.html">Terms & Condition</a></li>
-                            <li><a href="privacy_policy.html">Privacy Policy</a></li>
+                            <li><a href="contact.html">Terms & Condition</a></li>
+                            <li><a href="contact.html">Privacy Policy</a></li>
                             <li><a href="contact.html">Contact Us</a></li>
                           </ul>
                         </nav>

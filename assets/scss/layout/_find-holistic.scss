@@ -3,10 +3,37 @@
 
 .find-holistice{
     margin-top: 150px;
+
+    @include lg{
+        margin-top: 120px;
+    }
+    @include md{
+        margin-top: 100px;
+    }
+    @include sm{
+        margin-top: 75px;
+    }
+
+    .section-header{
+        @include md{
+            text-align: center;
+        }
+        @include sm{
+            text-align: center;
+        }
+    }
+
 }
 
 .find-holistic-img-group{
     position: relative;
+
+    @include md{
+        margin-top: 60px;
+    }
+    @include sm{
+        margin-top: 60px;
+    }
 
     .img-1{
         border-radius: 20px;
@@ -18,6 +45,17 @@
         background-color: $white;
         position: relative;
         z-index: 3;
+
+        @include lg{
+            padding: 0;
+            margin-right: 0;
+        }
+
+        @include sm{
+            margin-right: 0;
+            padding: 0;
+            width: 100%;
+        }
     }
 
     .img-2{
@@ -26,19 +64,50 @@
         right: 45%;
         border-radius: 20px;
         z-index: 4;
+
+        @include xl{
+            top: 300px;
+            width: 60%;
+        }
+        @include lg{
+            top: 300px;
+            width: 65%;
+            right: 20%;
+        }
+
+        @include md{
+            width: 52%;
+           right: unset;
+           left: 0;
+        }
+        @include sm{
+            width: 52%;
+           right: unset;
+           left: 0;
+        }
+        @include xs{
+            display: none;
+        }
     }
 
    
     .ractangle-dot{
         position: absolute;
         right: 0;
-        top: -50px;
+        top: -50px; 
+        @include sm{
+            display: none;
+        }
         
     }
     .shape-triangle{
         position: absolute;
         right: -50px;
         bottom: 80px;
+
+        @include sm{
+            display: none;
+        }
     }
 }
 
@@ -53,6 +122,20 @@
     transition: all 0.3s;
     margin-bottom: 40px;
 
+    @include lg{
+        width: auto;
+        padding: 30px;
+    }
+    @include md{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 45px;
+    }
+    @include sm{
+        width: auto;
+        padding: 25px;
+    }
+
     &:last-child{
         margin-bottom: 0;
     }
@@ -63,6 +146,13 @@
         line-height: 34px;
         color: $black;
         margin-bottom: 10px;
+
+        @include sm{
+            font-size: 24px;
+        }
+        @include xs{
+            font-size: 22px;
+        }
     }
 
     .number{
@@ -79,6 +169,16 @@
         left: 0;
         transform: translate(-50%, -50%);
         transition: all 0.3s;
+
+        @include xxl{
+            top: 0;
+            left: 50%;
+        }
+
+        @include sm{
+            font-size: 22px;
+            padding: 5px 10px;
+        }
     }
 
     &:hover{

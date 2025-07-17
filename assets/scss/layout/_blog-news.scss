@@ -1,9 +1,34 @@
 .blog_news_area{
+    .row{
+        &.style_1{
+            @include md{
+                gap: 20px;
+            }
+            @include sm{
+                gap: 20px;
+            }
+        }
+    }
     .blog_card{
         border: 1px solid $border;
         border-radius: 10px;
         width:100%;
         padding: 40px 60px;
+        @include nesthubmax{
+            padding: 40px 30px;
+            margin-top: 15px;
+        }
+        @include nesthub{
+            padding: 50px 30px;
+            margin-top: 15px;
+        }
+        @include md{
+            padding: 20px 30px;
+            height: 450px;
+        }
+        @include sm{
+            padding: 20px 30px;
+        }
         @include transition(0.4s);
         &:hover{
             border: 1px solid $primary;
@@ -25,6 +50,13 @@
         span{
             font-weight: 400;
             font-size: 21px;
+            @include nesthub{
+                font-size: 18px;
+            }
+            @include sm{
+                font-size: 18px;
+                justify-content: center;
+            }
             color: $text;
             i{
                 color: $primary;
@@ -33,9 +65,22 @@
         }
     }
     h3{
+        @include md{
+            margin-top: 10px;
+        }
+        @include sm{
+            line-height: 28px;
+            margin-top: 10px;
+        }
         a{
             font-weight: 600;
             font-size: 35px;
+            @include nesthub{
+                font-size: 24px;
+            }
+            @include sm{
+                font-size: 24px;
+            }
             letter-spacing: -0.03em;
             color: $black;
             @include transition(0.4s);
@@ -48,11 +93,25 @@
         @include border-radius(20px);
         width: 231px;
         height: 274px;
-        position: absolute;
-        top: -100px;
-        left: 55px;
-        visibility: hidden;
-        opacity: 0;
+        @media (min-width: 768px){
+            position: absolute;
+            top: -100px;
+            left: 55px;
+            visibility: hidden;
+            opacity: 0;
+        }
+        @include nesthubmax{
+            left: -30px;
+        }
+        @include nesthub{
+            left: -10px;
+        }
+        @include md{
+            top: 20px;
+        }
+        @include sm{
+            margin-top: 20px
+        }
         @include transition(0.4s);
         img{
             width: 100%;
@@ -63,16 +122,35 @@
     }
     .arrow_btn{
         span{
+            @include md{
+                position: absolute;
+                top: 110px !important;
+                right: 87px;
+            }
             border-radius: 999px;
             width: 80px;
             height: 80px;
             line-height: 80px;
+            font-size: 44px;
             display: block;
             text-align: center;
-            font-size: 44px;
             color: $black;
             background-color: $gray1;
             @include transition(0.4s);
+            @include nesthub{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 24px;
+                // margin-left: 10px;
+            }
+            @include sm{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 24px;
+                margin-left: 10px;
+            }
             i{
                 transform: rotate(-45deg);
                 -webkit-transform: rotate(-45deg);

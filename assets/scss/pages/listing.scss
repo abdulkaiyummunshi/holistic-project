@@ -1,4 +1,9 @@
 .inner_hero{
+    .row{
+        @include sm{
+            gap: 20px;
+        }
+    }
     &.style_1{
         background-image: url(../imgs/inner_hero/inner_bg.png);
     @include background_img(no-repeat, center, cover);
@@ -54,6 +59,9 @@
         h2{
             font-weight: 600;
             font-size: 35px;
+            @include sm{
+                font-size: 30px;
+            }
             line-height: 131%;
             letter-spacing: -0.03em;
             color: $white;
@@ -81,16 +89,96 @@
         }
     }
 }
+.listing_menu{
+    border: 1px solid $border;
+    padding: 4px 30px;
+    @include sm{
+        padding: 15px;
+    }
+    @include border-radius(10px);
+    h4{
+        font-weight: 400;
+        font-size: 17px;
+        color: $text;
+    }
+    .listing_menu_btn{
+        @include flex(row, flex-end, center);
+        gap: 20px;
+        @include sm{
+            justify-content: flex-start;
+        }
+        button{
+            border: none;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            background-color: $gray1;
+            @include border-radius(10px);
+            font-size: 24px;
+            @include transition(0.4s);
+           
+        }
+        .grid_btn.active_style,
+        .layout_btn.active_style{
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    .nice-select{
+        border: none !important;
+        width: fit-content;
+        margin-bottom: 0px !important;
+        &::after{
+            display: none;
+        }
+        &::before{
+            content: "\f107";
+            font-family: "Fontawesome";
+            position: absolute;
+            top: 50%;
+            @include transformY(-50%);
+            right: 0px;
+            @include transition(0.4s);
+        }
+        .current{
+            font-weight: 400;
+            font-size: 17px;
+            color: $text;
+        }
+        .list{
+            width: fit-content;
+        }
+    }
+}
+
 .listing_details_area{
-    
+    .row{
+        &.style_1{
+            @include md{
+                gap: 30px;
+            }
+            @include sm{
+                gap: 30px;
+            }
+        }
+    }
     .sidebar{
-        
+        padding: 0px !important;
         .widget{
             @include border-radius(20px);
             width: 100%;
             box-shadow: 0 20px 80px 0 rgba(8, 8, 8, 0.05);
             background: $white;
             padding: 40px;
+            @include nesthubmax{
+                padding: 20px;
+            }
+            @include nesthub{
+                padding: 20px;
+            }
+            @include sm{
+                padding: 20px;
+            }
             h3{
                 font-weight: 600;
                 font-size: 26px;
@@ -114,7 +202,7 @@
         .top_category{
             ul{
                 @include flex(column, flex-start, flex-start);
-                gap: 20px;
+                gap: 6px;
                 li{
                     width: 100%;
                     a{
@@ -139,6 +227,7 @@
             .advanced_contains{
                 @include flex(column, flex-start, flex-start);
                 gap: 20px;
+                
             }
             input{
                 outline: none;
@@ -156,20 +245,7 @@
                     color: $text;
                 }
             }
-            .nice-select{
-                outline: none;
-                border: none;
-                width: 100%;
-                background-color: $gray1;
-                padding: 0px 30px;
-                height: 50px;
-                line-height: 50px;
-                @include border-radius(999px);
-                font-weight: 400;
-                font-size: 17px;
-                font-family: $outfit-font !important;
-                color: $text !important;
-            }
+            
             .title{
                 h4{
                     font-weight: 600;
@@ -322,10 +398,20 @@
                 ul{
                     @include flex(column, center, flex-start);
                     gap: 20px;
+                    @include nesthub{
+                        gap: 10px;
+                    }
+                    @include sm{
+                        gap: 15px;
+                    }
                     li{
+                        padding: 0px;
                         a{
                             font-weight: 400;
                             font-size: 17px;
+                            @include nesthub{
+                                font-size: 13px;
+                            }
                             color: $text;
                             span{
                                 color: $primary;
@@ -341,6 +427,9 @@
                 h4{
                     font-weight: 500;
                     font-size: 18px;
+                    @include nesthub{
+                        // font-size: 16px;
+                    }
                     color: $black;
                     
                 }
@@ -350,7 +439,9 @@
                     border-radius: 999px;
                     background-color: $gray1;
                     padding: 9px 17px;
+                    
                     li{
+                        padding: 0px;
                         a{
                             color: $primary;
                             font-weight: 400;
@@ -364,19 +455,39 @@
             ul{
                 @include flex(column, flex-start, flex-start);
                 gap:30px;
+                @include nesthubmax{
+                    gap: 10px;
+                }
+                @include nesthub{
+                    gap: 10px;
+                }
+                @include md{
+                    gap: 10px;
+                }
+                @include sm{
+                    gap: 10px;
+                }
                 li{
                     
                         font-weight: 400;
                         font-size: 17px;
                         line-height: 153%;
                         color: $text;
+                        @include nesthub{
+                            font-size: 14px;
+                        }
                         span{
                             font-weight: 500;
                             font-size: 18px;
+                            
                             line-height: 156%;
                             color: $black;
                             display: inline-block;
                             width: 117px;
+                            @include nesthub{
+                                width: 100px;
+                                font-size: 16px;
+                            }
                         }
                     
                 }
@@ -387,8 +498,14 @@
             height: 443px;
             @include border-radius(20px);
             position: relative;
-
+            @include nesthub{
+                height: 350px;
+            }
+            @include sm{
+                height: 300px;
+            }
             img{
+                @include border-radius(20px);
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -430,6 +547,9 @@
         h2{
             font-weight: 600;
             font-size: 50px;
+            @include sm{
+            font-size: 30px;
+            }
             letter-spacing: -0.03em;
             text-transform: capitalize;
             color: $black;
@@ -445,21 +565,77 @@
         h3{
             font-weight: 600;
             font-size: 35px;
+            @include sm{
+                font-size: 30px;
+            }
             letter-spacing: -0.03em;
             color: $black;
         }
     }
-    .amenities{
+    .amenities{ 
+        .row{
+            &.style_001{
+                @include nesthubmax{
+                    gap: 20px;
+                    .col-lg-3{
+                        width: calc(50% - 20px);
+                        &.px-2{
+                            padding: 0px 12px !important;
+                        }
+                    }
+                }
+                @include nesthub{
+                    gap: 20px;
+                    .col-lg-3{
+                        width: calc(50% - 20px);
+                        &.px-2{
+                            padding: 0px 12px !important;
+                        }
+                    }
+                }
+                @include md{
+                    gap: 15px;
+                    .col-lg-3{
+                        &.px-2{
+                            padding: 0px 12px !important;
+                        }
+                    }
+                }
+                @include sm{
+                    gap: 10px;
+                    .col-lg-3{
+                        &.px-2{
+                            padding: 0px 12px !important;
+                        }
+                    }
+                }
+            }
+        }
         
         ul{
             @include flex(column, center, flex-start);
             gap: 20px;
+            @include nesthub{
+                gap: 20px;
+            }
+            @include md{
+                gap: 15px;
+            }
+            @include sm{
+                gap: 10px;
+            }
             li{
                 font-weight: 400;
                 font-size: 17px;
+                // @include nesthub{
+                //     font-size: 11px;
+                // }
                 color: $text;
                 span{
                     margin-right: 12px;
+                    // @include nesthub{
+                    //     margin-right: 6px;
+                    // }
                 }
             }
         }
@@ -469,10 +645,28 @@
         @include border-radius(20px);
         background-color: $white;
         padding: 10px 10px;
+        @include md{
+            max-width: 400px;
+            padding: 20px;
+        }
     }
     .holistic_iteam_card{
+        @include md{
+            @include flex(column, center, center);
+            gap: 20px;
+        }
         .holistic_iteam_contains{
             padding: 0px 0px 0px 26px;
+            
+            @include nesthubmax{
+                padding: 0px 0px 0px 13px;
+            }
+            @include nesthub{
+                padding: 0px 0px 0px 13px;
+            }
+            @include sm{
+                padding: 0px 0px 0px 13px;
+            }
             h4{
                 font-weight: 600;
                 font-size: 26px;
@@ -482,6 +676,33 @@
                 font-weight: 400;
                 font-size: 17px;
                 color: $text;
+            }
+        }
+        p{
+            @include nesthubmax{
+                br{
+                    display: none;
+            }
+            }
+            @include nesthub{
+                br{
+                    display: none;
+            }
+            }
+            @include sm{
+                br{
+                    display: none;
+                }
+            }
+        }
+        .col-lg-8{
+            @include md{
+                @include flex(row, center, center);
+                margin-top: 10px;
+            }
+            @include sm{
+                @include flex(row, center, center);
+                margin-top: 10px;
             }
         }
         .price{
@@ -510,11 +731,22 @@
         //     }
         // }
     }
+    .map_view{
+        iframe{
+            @include sm{
+                height: 300px !important;
+            }
+
+        }
+    }
     .video_frame{
         width: 100%;
         height: 529px;
         position: relative;
         @include border-radius(20px);
+        @include sm{
+            height: 300px;
+        }
         img{
             width: 100%;
             height: 100%;
@@ -530,12 +762,18 @@
             @include border-radius(50%);
             width: 80px ;
             height: 80px;
+            line-height: 80px;
+            font-size:22px;
+            @include sm{
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                font-size: 18px;
+            }
             cursor: pointer;
             display: block;
             text-align: center;
-            line-height: 80px;
             color: $text;
-            font-size:22px;
             background-color: #fff;
             box-shadow: 0 2px 10px 0 rgba(30, 30, 47, 0.1), 0 4px 3px 0 rgba(30, 30, 47, 0.12);
              &:hover{
@@ -576,10 +814,14 @@
     }
     .image_upload{
         @include flex(row, flex-start, center);
+        flex-wrap: wrap;
         gap: 20px;
         h5{
             font-weight: 600;
             font-size: 26px;
+            @include sm{
+                font-size: 18px;
+            }
             color: $black;
         }
         input{
@@ -669,6 +911,12 @@
 .inner_hero_slider{
     position: relative;
     height: 584px;
+    @include md{
+        margin-top: 90px !important;
+    }
+    @include sm{
+        margin-top: 90px !important;
+    }
     
     .left-arrow{
         @include md{
@@ -768,6 +1016,7 @@
     }
     &.style_2{
         height: 544px;
+        
         .left-arrow{
             top: 35%;
         }
@@ -777,6 +1026,12 @@
     }
     &.style_3{
         height: 544px;
+        @include md{
+            height: 460px;
+        }
+        @include sm{
+            height: 380px;
+        }
         .left-arrow{
             top: 43%;
         }
@@ -785,11 +1040,20 @@
         }
     }
     .overly_content{
+        .row{
+            @include sm{
+                gap: 20px;
+            }
+        }
         box-shadow: 0 5px 60px 0 rgba(0, 0, 0, 0.05);
         background: $white;
-        width: 1000px;
+        width: 100%;
+        max-width: 1000px;
         // height: 268px;
         padding: 40px 60px;
+        @include sm{
+            padding: 20px 30px;
+        }
         @include border-radius(10px);
         position: absolute;
         bottom:0px;
@@ -813,6 +1077,12 @@
             h2{
                 font-weight: 600;
                 font-size: 50px;
+                @include md{
+                    font-size: 40px;
+                }
+                @include sm{
+                    font-size: 30px;
+                }
                 letter-spacing: -0.03em;
                 text-transform: capitalize;
                 color: $black;
@@ -847,6 +1117,12 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px 10px 0 0;
             padding: 40px 60px;
+            @include md{
+                padding: 20px 30px;
+            }
+            @include sm{
+                padding: 20px 30px;
+            }
             width: 100%;
             @include border-radius(10px);
             position: absolute;
@@ -874,13 +1150,63 @@
         &.style_2{
             box-shadow: 0 5px 60px 0 rgba(0, 0, 0, 0.05);
             background: $white;
-            width: 100%;
+            max-width: 100% !important;
             padding: 40px 0px 30px 0px;
+            @include sm{
+                padding: 20px 15px;
+            }
             @include border-radius(0px);
             h5{
                 color: $black;
             }
 
+        }
+    }
+}
+.select_location{
+    width: 100%;
+    select{
+        @include border-radius(999px);
+        padding: 0px 30px;
+        background-color: $gray1;
+        border: none !important;
+        font-weight: 400;
+        font-size: 17px;
+        height: 50px !important;
+        margin-top: 0px !important;
+        position: relative;
+        color: $text;
+    }
+    .nice-select{
+                outline: none !important;
+                width: 100%;
+                background-color: $gray1;
+                height: 30px !important;
+                font-weight: 400;
+                // padding-right: 30px;
+                font-size: 17px;
+                font-family: $outfit-font !important;
+                color: $text !important;
+            
+        &::after{
+            display: none;
+        }
+        &::before{
+            content: "\f107";
+            font-family: "Fontawesome";
+            position: absolute;
+            top: 50%;
+            @include transformY(-50%);
+            right: 30px !important;
+            @include transition(0.4s);
+        }
+        .current{
+            font-weight: 400;
+            font-size: 17px;
+            color: $text;
+        }
+        .list{
+            width: fit-content;
         }
     }
 }

@@ -1,13 +1,21 @@
 .subscribe_area{
-    position: absolute;
-    top: -145px;
-    left: 50%;
+    @media (min-width:1024px){
+        position: absolute;
+        top: -145px;
+        left: 50%;
+        @include transformX(-50%);
+    }
     width: 100%;
-    @include transformX(-50%);
     .stay_connected{
         background-color: $primary;
         @include border-radius(20px);
         padding: 80px 80px 80px 60px;
+        @include md{
+            padding: 40px;
+        }
+        @include sm{
+            padding: 20px;
+        }
     }
     .sub_contains{
         position: relative;
@@ -21,6 +29,9 @@
         h3{
             font-weight: 600;
             font-size: 50px;
+            @include sm{
+                font-size: 34px;
+            }
             letter-spacing: -0.03em;
             text-transform: capitalize;
             color: $white;
@@ -29,7 +40,12 @@
             font-weight: 500;
             font-size: 18px;
             color: $white;
-            margin-top: 20px
+            margin-top: 20px;
+            @include sm{
+                br{
+                    display: none;
+                }
+            }
         }
     }
     .connected_form{
@@ -44,7 +60,16 @@
     }
     .input_area{
         @include flex(row, flex-end, center);
+        flex-wrap: wrap;
         gap: 15px;
+        @include md{
+            margin-top: 20px;
+            justify-content: flex-start;
+        }
+        @include sm{
+            justify-content: center;
+            margin-top: 20px;
+        }
         input{
             border: none;
             background-color: $white;

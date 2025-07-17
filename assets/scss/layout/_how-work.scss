@@ -4,6 +4,18 @@
 .how-work{
     margin-top: 150px;
     padding-bottom: 150px;
+     @include lg{
+        margin-top: 120px;
+        padding-bottom: 120px;
+    }
+    @include md{
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+    @include sm{
+        padding-bottom: 80px;
+        margin-top: 80px;
+    }
     position: relative;
 }
 
@@ -16,6 +28,9 @@
 
 .work-img{
     padding: 50px;
+    @include sm{
+        padding: 20px;
+    }
     position: relative;
 
     img{
@@ -28,6 +43,10 @@
         right: 0;
         z-index: -1;
         animation: moving-dots 20s linear infinite;
+        @include sm{
+            width: 200px;
+            height: 200px;
+        }
 
     }
     .line{
@@ -61,7 +80,14 @@
 .how-work-container{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 120px;
+    @include nesthub{
+        gap: 40px;
+    }
+    @include sm{
+        gap: 40px;
+    }
 }
 
 .tab-btn-wrapper{
@@ -97,6 +123,9 @@
             font-size: 26px;
             font-weight: 400;
             line-height: 36px;
+            @include sm{
+                font-size: 22px;
+            }
             color: $black;
 
             span{

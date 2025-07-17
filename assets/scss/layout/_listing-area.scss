@@ -208,3 +208,8 @@
         }
     }
 }
+.layout_view{
+    .listing-item{
+    @include flex(row, flex-start, center);
+    }
+}

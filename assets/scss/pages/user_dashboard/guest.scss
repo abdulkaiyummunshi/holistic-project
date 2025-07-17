@@ -2,17 +2,40 @@
         width: 100%;
         
     }
+    .user_dashboard_guest{
+        .row{
+            &.style_101{
+                @include md{
+                    gap: 30px;
+                }
+                @include sm{
+                    gap: 30px;
+                }
+            }
+        }
+    }
     .booking_card{
         padding: 60px 50px 60px 30px;
+        @include sm{
+            padding: 20px;
+        }
         border-top: 1px solid $border;
         position: relative;
         .user_meta_info{
             @include flex(row, flex-start, center);
             gap: 30px;
+            @include sm{
+                gap: 20px;
+            }
             .user_img{
                 width: 88px;
                 height: 88px;
                 @include border-radius(5px);
+                @include sm{
+                    width: 50px;
+                    height: 50px;
+                    
+                }
                 img{
                     @include border-radius(5px);
                     width: 100%;
@@ -20,10 +43,20 @@
                     object-fit: cover;
                 }
             }
+            .name_btn{
+                @include sm{
+                    width: calc(100% - 80px);
+                }
+
+            }
             .user_name{
+
                 h4{
                     font-weight: 600;
                     font-size: 26px;
+                    @include sm{
+                        font-size: 18px;
+                    }
                     color: #000;
                 }
             }
@@ -40,6 +73,10 @@
                     color: $white;
                     background-color: $primary;
                     border: none;
+                    @include sm{
+                        padding: 5px 10px;
+                        font-size: 14px;
+                    }
                     &.style_1{
                         background-color: #d40101;
                     }
@@ -48,6 +85,9 @@
         }
         .booking_list_area{
             padding-left: 118px;
+            @include sm{
+                padding-left: 0px;
+            }
         }
         ul{
             @include flex(column, flex-start, flex-start);
@@ -55,6 +95,7 @@
             margin-top: 30px;
             @include sm{
                 margin-top: 15px;
+                gap: 10px;
             }
             li{
                 font-weight: 400;
@@ -62,11 +103,18 @@
                 color: $black;
                 @include flex(row, flex-start, center);
                 gap: 20px;
+                @include sm{
+                    font-size: 14px;
+                    gap: 10px;
+                }
                 span{
                     color: $primary;
                 }
                 p{
                     color: $text;
+                    @include sm{
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -80,6 +128,10 @@
                 @include border-radius(5px);
                 font-weight: 400;
                 font-size: 17px;
+                @include sm{
+                    padding: 7px 10px;
+                    font-size: 14px;
+                }
                 span{
                     margin-right: 10px;
                     color: $white;
@@ -91,7 +143,9 @@
             top: 50%;
             @include transformY(-50%);
             right: 50px;
-
+            @include sm{
+                display: none;
+            }
             button{
                 border: none;
                 background-color: #d40101;
@@ -112,12 +166,15 @@
         border-radius: 20px;
         width: 100%;
         padding: 40px;
-        @include sm{
-            padding: 30px;
-        }
-        @include sm{
+        @include nesthub{
             padding: 20px;
         }
+            @include md{
+                padding: 20px !important;
+            }
+            @include sm{
+                padding: 20px !important;
+            }
         background-color: $gray1;
         overflow-y: auto; 
         // height: 100%; 
@@ -295,6 +352,11 @@
         .heading_area {
             padding: 20px 30px;
             border-bottom: 1px solid $border;
+            .row{
+                @include sm{
+                    gap: 20px;
+                }
+            }
             .name {
                 h4 {
                     font-size: 26px;
@@ -376,6 +438,9 @@
             color: $black;
         }
     }
+    .date_select{
+        @include flex(row, center, center);
+    }
     .nice-select{
         border-radius: 5px;
         color: $black;
@@ -387,7 +452,7 @@
         cursor: pointer;
         display: block;
         float: right;
-        height: 0px !important;
+        height: 10px !important;
         border: 1px solid transparent !important;
         line-height: 0px !important;
         outline: 0;
@@ -436,7 +501,7 @@
         padding: 30px;
     }
     @include nesthub{
-        padding: 30px;
+        padding: 20px;
     }
     @include md{
         padding: 30px;
@@ -540,7 +605,7 @@
             right: 10px;
         }
         @include nesthub{
-            right: 30px;
+            right: 20px;
         }
         @include md{
             right: 30px;
@@ -555,6 +620,10 @@
             color: $white;
             background-color: $primary;
             padding: 5px 10px;
+            @include nesthub{
+                padding: 4px 8px;
+                font-size: 14px;
+            }
             i{
                 margin-right: 5px;
             }
@@ -569,6 +638,18 @@
 
 .page_change_btn{
     padding: 60px;
+    @include nesthubmax{
+        padding: 50px
+    }
+    @include nesthub{
+        padding: 40px
+    }
+    @include md{
+        padding: 30px
+    }
+    @include sm{
+        padding: 20px
+    }
     ul{
         @include flex(row, flex-start, center);
         gap: 20px;
@@ -578,10 +659,17 @@
                 width: 50px;
                 height: 50px;
                 line-height: 50px;
+                
                 @include border-radius(50%);
                 border: 1px solid $border;
                 font-weight: 500;
                 font-size: 18px;
+                @include sm{
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 16px;
+                }
                 color: #000;
                 &:hover{
                     background-color: $primary;
@@ -596,9 +684,21 @@
 .review_card{
     border-top: 1px solid $border;
     padding: 40px 60px;
+    @include md{
+    padding: 20px 20px;
+    }
+    @include sm{
+    padding: 10px 20px;
+    }
     .review_heading{
         @include flex(row, space-between, center);
         flex-wrap: wrap;
+        @include sm{
+        gap: 20px;
+        .stars{
+        margin-bottom: 0px;
+        }
+        }
         .user_meta_info{
             @include flex(row, flex-start, center);
             gap: 14px;
@@ -641,6 +741,13 @@
         span{
             margin-right: 10px;
         }
+        @include sm{
+        padding: 6px;
+        font-size: 13px;
+        span{
+        margin-right: 5px;
+        }
+        }
         &.style_1{
             background-color: #d40101;
             color: $white;
@@ -652,6 +759,14 @@
 
 .profile_info{
     padding: 30px 60px 60px 60px;
+    @include nesthub{
+        padding: 30px 30px 30px 30px;
+    }
+    @include sm{
+        padding: 20px;
+        @include flex(column, center, center);
+        
+    }
     border-top: 1px solid $border;
     .profile_image{
         width: 150px;
@@ -667,6 +782,9 @@
     .profile_settings{
         @include flex(row, center, center);
         gap: 30px;
+        @include sm{
+            gap: 10px;
+        }
         flex-wrap: wrap;
         
     }
@@ -674,6 +792,9 @@
         border: 1px solid $border;
         border-radius: 5px;
         width: calc(50% - 15px);
+        @include sm{
+            width: 100%;
+        }
         padding: 16px 30px;
         font-weight: 400;
         font-size: 17px;
@@ -713,6 +834,9 @@
 .logout_area{
     border-top: 1px solid $border;
     padding: 40px 60px;
+    @include sm{
+        padding: 20px;
+    }
     height: 553px;
     h4{
         font-weight: 500;

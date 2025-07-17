@@ -12,7 +12,9 @@
      top: 0; 
     }
 }
-
+.header-menu-wrapper{
+  @include sm{}
+}
 
 header.sticky {
   
@@ -62,7 +64,18 @@ header.sticky {
 }
 
 .header__right{
-
+  @include lg{
+    @include flex(row, space-between, center);
+    gap: 20px;
+  }
+  @include md{
+    @include flex(row, space-between, center);
+    gap: 20px;
+  }
+  @include sm{
+    @include flex(row, space-between, center);
+    gap: 20px;
+  }
   .user-with-btn{
     display: flex;
     align-items: center;
@@ -101,6 +114,12 @@ header.sticky {
   }
 
   .primary-btn{
+    @include lg{
+      display: none;
+    }
+    @include md{
+      display: none;
+    }
     @include sm{
       display: none;
     }
@@ -130,6 +149,24 @@ header.sticky {
 
   @include lg{
     display: flex;
+    &.style_1{
+      color: $black;
+      border: 1px solid $black;
+    }
+  }
+  @include md{
+    display: flex;
+    &.style_1{
+      color: $black;
+      border: 1px solid $black;
+    }
+  }
+  @include sm{
+    display: flex;
+    &.style_1{
+      color: $black;
+      border: 1px solid $black;
+    }
   }
 
   &.error-page{
@@ -141,15 +178,38 @@ header.sticky {
 .header__area{
   &.style_01{
     background-color: $white;
-    // height: 90px;
     ul{
       li{
+        &.has-dropdown{
+          &::after{
+            color: $black;
+            
+          }
+        }
         a{
           color: $black;
-          &:hover{
+           &:hover{
             color: $primary;
           }
         }
+        ul{
+          li{
+            a{
+              color: $black !important;
+              &:hover{
+                color: $white !important;
+              }
+            }
+          }
+        }
+        &:hover{
+               &.has-dropdown{
+          &::after{
+            color: $primary !important;
+            
+          }
+        }
+            }
       }
     }
   }

@@ -155,7 +155,7 @@
         speed: 7000,
         spaceBetween: 80,
         slidesPerView: 3,
-        autoplay: false,
+        autoplay: true,
 
         breakpoints: {
           350: {
@@ -182,6 +182,9 @@
           1200: {
             slidesPerView: 2.5,
             centeredSlides: true,
+          },
+          1400: {
+            slidesPerView: 3,
           }
          
         },
@@ -202,6 +205,32 @@
         pagination: {
           el: ".fraction",
           type: "fraction",
+        },
+
+        breakpoints: {
+          350: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 15,
+          },
+          576: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+          }
+         
         },
         
       })
@@ -364,7 +393,22 @@
           $('#h2-tab-annually').addClass('active');
           $('#h2-tab-monthly').removeClass('active');
         });
+    function gridLayout() {
+      $(".layout_btn").click(function () {
+        $(".grid_view").addClass("d-none");
+        $(".layout_view").removeClass("d-none");
+        $(".layout_btn").addClass("active_style");
+        $(".grid_btn").removeClass("active_style");
+      });
 
+      $(".grid_btn").click(function () {
+        $(".layout_view").addClass("d-none");
+        $(".grid_view").removeClass("d-none");
+        $(".layout_btn").removeClass("active_style");
+        $(".grid_btn").addClass("active_style");
+      });
+    }
+    gridLayout()
 
       // 17. scroll Revel
         const sr = ScrollReveal({
@@ -884,30 +928,7 @@
         uploadedFiles = reorderedFiles;
         console.log("Files reordered:", uploadedFiles.map(f => f.name));
       }
-      // $('#saveGallery').on('click', function () {
-      //   if (uploadedFiles.length === 0) {
-      //     alert('Please upload some images first!');
-      //     return;
-      //   }
-      //   const featuredImage = $imagePreviews.find('.image-item.featured').data('filename');
-      //   const imageNames = uploadedFiles.map(file => file.name);
-
-      //   console.log('--- Gallery Data to Save ---');
-      //   console.log('All Images (in current order):', imageNames);
-      //   console.log('Featured Image:', featuredImage);
-      //   console.log('--- End Gallery Data ---');
-
-      //   alert('Gallery data logged to console. In a real application, this would be sent to a server.');
-
-      //   const formData = new FormData();
-      //   uploadedFiles.forEach((file, index) => {
-      //     formData.append(`images[${index}]`, file);
-      //   });
-      //   if (featuredImage) {
-      //     formData.append('featured_image', featuredImage);
-      //   }
-
-      // });
+      
 
   }
   dragDrop()
@@ -940,16 +961,11 @@
   describTion()
   function manageAds(){
     $(document).ready(function () {
-      // Example: Handle "Create New Campaign" button click
       $('.create-new-campaign-btn').on('click', function () {
         alert('Create New Campaign button clicked!');
-        // In a real application, you'd likely navigate to a new page or show a form
       });
-
-      // Example: Handle "Submit Your Ad" button click
       $('.submit-ad-btn').on('click', function () {
         alert('Submit Your Ad button clicked!');
-        // Collect form data and send it to a server
         const searchListing = $('input[placeholder="Search For A Listing"]').val();
         const payPerView = $('input[placeholder="Pay per View"]').val();
         const date = $('input[placeholder="YYYY-MM-DD"]').val();
@@ -970,15 +986,10 @@
           enableLoggedInUsers
         });
       });
-
-      // Optional: Add some basic form validation or dynamic behavior
-      // For instance, if you want to ensure date format
       $('input[placeholder="YYYY-MM-DD"]').on('change', function () {
         const dateValue = $(this).val();
         const datePattern = /^\d{4}-\d{2}-\d{2}$/;
         if (dateValue && !datePattern.test(dateValue)) {
-          // alert('Please enter date in YYYY-MM-DD format.');
-          // You might add a visual error message instead of an alert
         }
       });
     });
@@ -997,7 +1008,9 @@
     centerPadding: "0px",
     initialSlide: 2,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } }
+      { breakpoint: 1200, settings: { slidesToShow: 4, slidesToScroll: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 800, settings: { slidesToShow: 2, slidesToScroll: 1 } }
     ]
   });
   $('.inner_slider').slick({
@@ -1044,7 +1057,7 @@
     nextArrow: `<span class="right-arrow"><i class="fa-solid fa-arrow-right"></i></span>`,
     initialSlide: 2,
     responsive: [
-      { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 1024, settings: { slidesToShow: 1, slidesToScroll: 1 } },
       { breakpoint: 767, settings: { slidesToShow: 1, slidesToScroll: 1 } }
     ]
   });
@@ -1059,6 +1072,8 @@
     speed: 2000,
     easing: 'ease-in-out',
   });
+
+
 })(jQuery);
 
 

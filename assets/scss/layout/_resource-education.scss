@@ -1,9 +1,29 @@
 
 
 // Resource and Education start section
-
+@include nesthubmax{
+    .nestmax-none{
+        display: none;
+    }
+}
 .resource-education{
     margin-top: 150px;
+     @include lg{
+        margin-top: 120px;
+    }
+    @include md{
+        margin-top: 100px;
+    }
+    @include sm{
+        margin-top: 80px;
+    }
+    .row{
+        &.style_1{
+            @include sm{
+                gap: 20px;
+            }
+        }
+    }
 }
 
 .resource-item{

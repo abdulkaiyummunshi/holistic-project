@@ -8,6 +8,28 @@
     }
 }
 .active_listings{
+    .row{
+        @include nesthub{
+            justify-content: center;
+            .col-lg-3{
+                width: calc(50% - 15px);
+                &.style_1{
+                    margin-top: 20px;
+                }
+            }
+        }
+        @include sm{
+            justify-content: center;
+            .col-lg-3{
+                &.style_1{
+                    margin-top: 20px;
+                }
+                &.style_2{
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
     .active_card{
         border-radius: 5px;
         width: 100%;
@@ -48,6 +70,9 @@
     background-color: $gray1;
         @include border-radius(5px);
         padding: 30px;
+        @include nesthub{
+            padding: 15px;
+        }
     .title{
         h4{
             font-weight: 500;
@@ -67,18 +92,26 @@
                 .icon_name{
                     @include flex(row, flex-start, center);
                     gap: 15px;
+                    @include nesthub{
+                        gap: 8px;
+                    }
                     .icon{
                         width: 30px;
                         height: 30px;
                         line-height: 30px;
+                        
                         @include border-radius(30px);
                         background-color: $white;
                         text-align: center;
                         display: block;
                     }
                     h5{
+                        width: calc(100% - 40px);
                         font-weight: 400;
                         font-size: 14px;
+                        @include nesthub{
+                            font-size: 12px;
+                        }
                         color: $text;
                         span{
                             color: $primary;
@@ -88,6 +121,9 @@
                 p{
                     font-weight: 400;
                     font-size: 14px;
+                    @include nesthub{
+                        font-size: 10px;
+                    }
                     color: $black;
                 }
             }
@@ -110,6 +146,7 @@
                 .name{
                     @include flex(column, center, flex-start);
                     gap: 10px;
+                    width: calc(100% - 60px);
                     h5{
                         font-weight: 500;
                         font-size: 14px;
@@ -143,11 +180,32 @@
         width: 100%;
         height: 495px;
         padding: 60px 50px;
+        @include sm{
+            padding: 30px 25px;
+        }
         
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        @include nesthub{
+            width: 100%;
+            height: fit-content;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        @include md{
+            width: 100%;
+            height: fit-content;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
         }
         @include sm{
             width: 100%;
@@ -161,6 +219,9 @@
     }
     .btn_area{
         padding: 0px 60px 60px 60px;
+        @include sm{
+            padding: 0px 20px 20px 20px;
+        }
         a{
             @include border-radius(5px);
         }
@@ -224,11 +285,21 @@
   }
   .books_views_area{
       padding: 40px 60px 60px 60px;
+      @include sm{
+        padding: 20px;
+      }
       border-top: 1px solid $border;
 
   }
 .booking_view{
     @include flex(row, space-between, center);
+    flex-wrap: wrap;
+    @include nesthub{
+        gap: 15px;
+    }
+    @include sm{
+        gap: 10px;
+    }
     border-bottom: 1px solid $border;
     padding-bottom: 20px;
     h4{
@@ -239,65 +310,73 @@
     .bookings_contains{
         @include flex(row, flex-start, center);
         gap: 0px;
+        @include sm{
+            gap: 15px;
+        }
 
     }
-//     .nice-select{
-//         border-radius: 5px;
-//         color: $black;
-//         opacity: 1;
-//         font-size: 18px;
-//         font-weight: 500;
-//         font-family: $outfit-font;
-//         clear: both;
-//         cursor: pointer;
-//         display: block;
-//         float: right;
-//         height: 0px !important;
-//         border: 1px solid transparent !important;
-//         line-height: 0px !important;
-//         outline: 0;
-//         padding-left: 18px;
-//         padding-right: 30px;
-//         position: relative;
-//         margin-top: 10px !important;
-//         margin-bottom: 0px !important;
-//         text-align: right !important;
-//         -webkit-transition: all .2s ease-in-out;
-//         transition: all .2s ease-in-out;
-//         -webkit-user-select: none;
-//         -moz-user-select: none;
-//         -ms-user-select: none;
-//         user-select: none;
-//         white-space: nowrap;
-//         // width: 300px !important;
-//         &::after{
-//             display: none;
-//         }
-//         &::before{
-//             content: "\f107";
-//             font-family: "Fontawesome";
-//             position: absolute;
-//             color: $primary;
-//             top: 50%;
-//             @include transformY(-50%);
-//             right: 0px;
-//             @include transition(0.4s);
-//         }
-//         &.open{
-//             margin-top: 30px;
-//             &::before{
-//                 transform: rotate(180deg);
-//                 -webkit-transform: rotate(180deg);
-//                 -moz-transform: rotate(180deg);
-//                 -ms-transform: rotate(180deg);
-//                 -o-transform: rotate(180deg);
-// }
-//         }
-//         .list{
-//             margin-top: 20px;
-//             width: 200px;
-//         }
-//     }
+    .nice-select{
+        border-radius: 5px;
+        color: $black;
+        opacity: 1;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: $outfit-font;
+        clear: both;
+        cursor: pointer;
+        display: block;
+        float: right;
+        height: 0px !important;
+        border: 1px solid transparent !important;
+        line-height: 0px !important;
+        outline: 0;
+        padding-left: 18px;
+        padding-right: 30px;
+        @include sm{
+            padding-left: 0px !important;
+            font-size: 16px;
+            padding-right: 20px;
+        }
+        position: relative;
+        margin-top: 10px !important;
+        margin-bottom: 0px !important;
+        text-align: right !important;
+        -webkit-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        white-space: nowrap;
+        // width: 300px !important;
+        &::after{
+            display: none;
+        }
+        &::before{
+            content: "\f107";
+            font-family: "Fontawesome";
+            position: absolute;
+            color: $primary;
+            top: 50%;
+            @include transformY(-50%);
+            right: 0px;
+            @include transition(0.4s);
+        }
+        &.open{
+            margin-top: 30px;
+            &::before{
+                transform: rotate(180deg);
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+}
+        }
+        .list{
+            margin-top: 20px;
+            width: 200px;
+        }
+    }
 }
 .month_week_list{
     @include flex(row, space-between, center);
@@ -358,6 +437,9 @@
 }
 .qr_scan_area{
     padding: 53px 60px 60px 60px;
+    @include sm{
+        padding: 20px;
+    }
     border-top: 1px solid $border;
     h4{
         font-weight: 500;
@@ -371,6 +453,9 @@
         // height: 379px;
         background-color: $gray1;
         padding: 24px 53px;
+        @include sm{
+            padding: 10px;
+        }
         .qr_img{
             width: 273px;
             height: 285px;
@@ -404,6 +489,11 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+    @include sm{
+        margin-bottom: 0px;
+        gap: 15px;
+    }
 
     .navigation {
         display: flex;
@@ -460,6 +550,9 @@
 .month-name {
     text-align: center;
     font-size: 3em;
+    @include sm{
+        font-size: 28px;
+    }
     font-weight: 400;
     color: $text; 
     letter-spacing: 2px;
@@ -480,6 +573,10 @@
     letter-spacing: -0.03em;
     color: #000;
     padding: 20px;
+    @include sm{
+        font-size: 18px;
+        padding: 10px;
+    }
 }
 
 .day-of-week {
@@ -487,12 +584,17 @@
     background-color: $white;
     font-weight: 900;
     font-size: 29px;
-
+    @include sm{
+        font-size: 18px;
+    }
 }
 
 .date {
     border: 1px solid $border; 
     font-size: 36px;
+    @include sm{
+        font-size: 18px;
+    }
     cursor: pointer; 
     transition: background-color 0.2s ease-in-out;
 
@@ -627,6 +729,34 @@
         color: $black;
     }
 }
+#add-listing-content{ 
+    .row{ 
+        @include nesthub{
+            &.style_1{
+                gap: 30px;
+            }
+            .col-lg-4{
+            width: calc(50% - 15px);
+        }
+        }
+        &.style_1{
+            @include md{
+                gap: 24px;
+            }
+            @include sm{
+                gap: 24px;
+            }
+        }
+        &.style_2{
+            @include md{
+                gap: 54px;
+            }
+            @include sm{
+                gap: 54px;
+            }
+        }
+    }
+}
 .chose_list_type{
     width: 100%;
     input{
@@ -685,13 +815,22 @@
 .basic_information{
     border-top: 1px solid $border;
     padding: 50px;
+    @include nesthub{ 
+        padding: 20px;
+    }
+    @include sm{
+        padding: 20px;
+    }
     .listing_input{
         input{
-            width: calc(100% - 15px);
+            width: 100%;
             border: none;
             background-color: $gray1;
             @include border-radius(5px);
             padding: 17px 30px;
+            @include sm{
+                padding: 14px 15px;
+            }
             font-weight: 400;
             font-size: 17px;
             color: $black;
@@ -713,6 +852,15 @@
 
 .form-row {
     @include flex(row, space-between, center);
+    flex-wrap: wrap;
+    @include md{
+        margin-top: 10px;
+        padding: 0px 10px;
+    }
+    @include sm{
+        margin-top: 10px;
+        padding: 0px 20px;
+    }
     gap: 10px;
 
     .label-text {
@@ -787,6 +935,9 @@
 }
 .active_area{
     padding: 40px 60px 60px 60px;
+    @include sm{
+        padding: 20px 30px 30px 30px;
+    }
     border-top: 1px solid $border;
     h4{
         font-weight: 400;
@@ -796,15 +947,25 @@
 }
 .gallery_area{
     padding: 16px 30px;
+    @include sm{
+        padding: 14px 15px;
+    }
     background-color: $gray1;
     @include border-radius(5px);
     h4{
         font-weight: 500;
         font-size: 18px;
+        @include sm{
+            font-size: 16px;
+        }
         color: $black;
         span{
             font-size: 24px;
             margin-right: 10px;
+            @include sm{
+            font-size: 18px;
+            margin-right: 8px;
+            }
         }
     }
 }
@@ -1010,11 +1171,15 @@
 .editor-toolbar {
     display: flex;
     align-items: center;
+    flex-wrap:wrap;
     border: 1px solid $border;
     border-bottom: none;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     padding: 8px 10px;
+    @include sm{
+        padding: 4px 5px;
+    }
     background-color: #f9f9f9;
 }
 
@@ -1033,6 +1198,10 @@
         border-radius: 4px;
         font-weight: 500;
         font-size: 18px;
+        @include sm{
+            font-size: 14px;
+            padding: 6px 5px;
+        }
         color: $black;
 
         &:hover {
@@ -1084,6 +1253,10 @@
     border: none;
     padding: 6px 10px;
     font-size: 16px;
+    @include sm{
+        padding: 6px 5px;
+        font-size: 14px;
+    }
     cursor: pointer;
     margin-right: 5px;
     border-radius: 4px;
@@ -1119,9 +1292,17 @@
 // pending
 .pending_content{
     padding: 40px 60px;
+    @include sm{
+        padding: 20px;
+    }
     border-top: 1px solid $border;
     .pending_heading{
         @include flex(row, space-between, center);
+        flex-wrap: wrap;
+        @include sm{
+            gap: 20px;
+
+        }
         padding-bottom: 20px;
         border-bottom: 1px solid $border;
         h5{
@@ -1162,6 +1343,9 @@
     .single_pending{
         @include flex(row, space-between, center);
         flex-wrap: wrap;
+        @include sm{
+            gap: 20px;
+        }
         .left_content{
             @include flex(row, flex-start, center);
             gap: 20px;
@@ -1281,7 +1465,12 @@ $placeholder-color: #6c757d;
         .form-row {
             display: flex;
             gap: 20px;
-
+            @include md{
+                padding: 0px;
+            }
+            @include sm{
+                padding: 0px;
+            }
             input[type="text"],
             select {
                 flex: 1;
