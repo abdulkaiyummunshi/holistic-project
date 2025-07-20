@@ -29203,10 +29203,13 @@ ul.children {
   @media only screen and (min-width: 0px) and (max-width: 767px) {
     .listing_details_area .holistic_iteam_card .holistic_iteam_contains {
       padding: 0px 0px 0px 13px; } }
-  .listing_details_area .holistic_iteam_card .holistic_iteam_contains h4 {
+  .listing_details_area .holistic_iteam_card .holistic_iteam_contains h4 a {
     font-weight: 600;
     font-size: 26px;
-    color: #111111; }
+    color: #111111;
+    transition: all 0.4s ease; }
+    .listing_details_area .holistic_iteam_card .holistic_iteam_contains h4 a:hover {
+      color: #00AF78; }
   .listing_details_area .holistic_iteam_card .holistic_iteam_contains p {
     font-weight: 400;
     font-size: 17px;

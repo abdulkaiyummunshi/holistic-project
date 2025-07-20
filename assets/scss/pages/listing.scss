@@ -668,9 +668,15 @@
                 padding: 0px 0px 0px 13px;
             }
             h4{
-                font-weight: 600;
+                a{
+                    font-weight: 600;
                 font-size: 26px;
                 color: $black;
+                @include transition(0.4s);
+        &:hover{
+            color: $primary;
+        }
+                }
             }
             p{
                 font-weight: 400;
