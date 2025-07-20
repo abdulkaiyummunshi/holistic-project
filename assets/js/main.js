@@ -161,7 +161,8 @@
           nextEl: '.swiper-button-next',
         },
         pagination: {
-          el: ".swiper-pagination"
+          el: ".swiper-pagination",
+          clickable: true,
         },
 
         breakpoints: {
@@ -212,6 +213,8 @@
         pagination: {
           el: ".fraction",
           type: "fraction",
+          clickable: true,
+          
         },
 
         breakpoints: {

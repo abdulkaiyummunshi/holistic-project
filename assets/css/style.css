@@ -24280,8 +24280,10 @@ header.sticky {
   margin-bottom: 284px !important; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .listing-area {
-      margin-top: 120px;
-      margin-bottom: 120px !important; } }
+      margin-top: 120px; } }
+  @media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .listing-area {
+      margin-bottom: 260px !important; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .listing-area {
       margin-top: 100px;
@@ -24458,6 +24460,12 @@ header.sticky {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center; }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .layout_view .listing-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
 
 .find-holistice {
   margin-top: 150px; }
@@ -24617,7 +24625,7 @@ header.sticky {
       margin-top: 120px; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .top-cities {
-      margin-top: 100px; } }
+      margin-top: 202px; } }
   @media only screen and (min-width: 0px) and (max-width: 767px) {
     .top-cities {
       margin-top: 80px; } }
@@ -25581,6 +25589,7 @@ header.sticky {
     position: absolute;
     top: 0;
     left: 50%;
+    pointer-events: none;
     transform: translateX(-50%); }
 
 .testimonial-item {
