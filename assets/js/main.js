@@ -156,6 +156,13 @@
         spaceBetween: 80,
         slidesPerView: 3,
         autoplay: true,
+        navigation: {
+          prevEl: '.swiper-button-prev',
+          nextEl: '.swiper-button-next',
+        },
+        pagination: {
+          el: ".swiper-pagination"
+        },
 
         breakpoints: {
           350: {
@@ -409,6 +416,21 @@
       });
     }
     gridLayout()
+    function weWork() {
+      $(".tab-btn-wrapper .style_1").click(function () {
+        $(".work_contains_2").addClass("d-none");
+        $(".work_contains_1").removeClass("d-none");
+        $(".tab-btn-wrapper .style_1").addClass("active");
+        $(".tab-btn-wrapper .style_2").removeClass("active");
+      });
+      $(".tab-btn-wrapper .style_2").click(function () {
+        $(".work_contains_1").addClass("d-none");
+        $(".work_contains_2").removeClass("d-none");
+        $(".tab-btn-wrapper .style_2").addClass("active");
+        $(".tab-btn-wrapper .style_1").removeClass("active");
+      });
+    }
+    weWork()
 
       // 17. scroll Revel
         const sr = ScrollReveal({

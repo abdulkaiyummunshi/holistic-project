@@ -1,25 +1,57 @@
 
 // Latest listing section
-
+       
 .listing-area{
+    position: relative;
     margin-top: 150px;
-
+    margin-bottom: 284px !important;
+    
     @include lg{
         margin-top: 120px;
+        margin-bottom: 120px !important;
     }
     @include md{
         margin-top: 100px;
+        margin-bottom: 200px !important;
     }
     @include sm{
         margin-top: 80px;
+        margin-bottom: 166px !important;
     }
+    .swiper-pagination{
+        bottom: -90px;
+    }
+     .swiper-pagination-bullet {
+           background-color: $gray1;
+            width: 50px;
+            height: 10px;
+            @include border-radius(10px);
+            opacity: 1;
+            @include transition(0.4s);
+
+        }
+
+        .swiper-pagination-bullet-active {
+            width: 142px;
+            height: 10px;
+            background-color: $primary;
+
+        }
+        .swiper-button-prev{
+            display: none;
+        }
+        .swiper-button-next{
+            display: none;
+        }
 }
 
 .listing-item{
+
     border-radius: 20px;
     border: 1px solid transparent;
     padding: 20px;
     background-color: $white;
+    box-shadow: 0 5px 60px 0 rgba(0, 0, 0, 0.05);
     transition: all 0.3s;
 
     @include xxs{
@@ -196,6 +228,7 @@
 
     &:hover{
         border-color: $primary;
+        background-color: $gray1;
 
         figure{
             img{

@@ -30,7 +30,15 @@
     }
   .row{
     &.style_1{
-      gap: 30px;
+      @include nesthub{
+        gap: 30px;
+      }
+      @include md{
+        gap: 30px;
+      }
+      @include sm{
+        gap: 30px;
+      }
     }
   }
 

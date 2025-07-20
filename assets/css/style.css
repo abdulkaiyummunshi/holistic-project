@@ -24275,22 +24275,49 @@ header.sticky {
       display: none; } }
 
 .listing-area {
-  margin-top: 150px; }
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 284px !important; }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .listing-area {
-      margin-top: 120px; } }
+      margin-top: 120px;
+      margin-bottom: 120px !important; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .listing-area {
-      margin-top: 100px; } }
+      margin-top: 100px;
+      margin-bottom: 200px !important; } }
   @media only screen and (min-width: 0px) and (max-width: 767px) {
     .listing-area {
-      margin-top: 80px; } }
+      margin-top: 80px;
+      margin-bottom: 166px !important; } }
+  .listing-area .swiper-pagination {
+    bottom: -90px; }
+  .listing-area .swiper-pagination-bullet {
+    background-color: #f9f9f9;
+    width: 50px;
+    height: 10px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    opacity: 1;
+    transition: all 0.4s ease; }
+  .listing-area .swiper-pagination-bullet-active {
+    width: 142px;
+    height: 10px;
+    background-color: #00AF78; }
+  .listing-area .swiper-button-prev {
+    display: none; }
+  .listing-area .swiper-button-next {
+    display: none; }
 
 .listing-item {
   border-radius: 20px;
   border: 1px solid transparent;
   padding: 20px;
   background-color: #fff;
+  box-shadow: 0 5px 60px 0 rgba(0, 0, 0, 0.05);
   transition: all 0.3s; }
   @media only screen and (min-width: 0px) and (max-width: 479px) {
     .listing-item {
@@ -24419,7 +24446,8 @@ header.sticky {
       line-height: 28px;
       color: #fff; }
   .listing-item:hover {
-    border-color: #00AF78; }
+    border-color: #00AF78;
+    background-color: #f9f9f9; }
     .listing-item:hover figure img {
       transform: scale(1.05); }
     .listing-item:hover .service-tag {
@@ -24755,8 +24783,15 @@ header.sticky {
   @media only screen and (min-width: 0px) and (max-width: 767px) {
     .more-info {
       margin-top: 80px; } }
-  .more-info .row.style_1 {
-    gap: 30px; }
+  @media only screen and (min-width: 992px) and (max-width: 1024px) {
+    .more-info .row.style_1 {
+      gap: 30px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .more-info .row.style_1 {
+      gap: 30px; } }
+  @media only screen and (min-width: 0px) and (max-width: 767px) {
+    .more-info .row.style_1 {
+      gap: 30px; } }
   .more-info .section-title {
     color: #fff; }
   .more-info p {
